@@ -1,0 +1,26 @@
+h1. Layout Layer
+
+This plugin only does one job, but it does it well: Automatically creates layouts based on HTML files in other extensions.
+
+h2. Why?
+
+The reason boils down to the following:
+
+* I don't like writing layouts within a browser
+* My layouts are tied to extensions
+
+So: Any HTML files within an extension's layouts folder (which is not part of the default extension generation) will get replicated to a Layout object within the Radiant application. If it is nested within folders, then the name becomes a Ruby-like indication of this (eg: directory/file.html becomes a layout named Directory::File). Here's a rough example:
+
+<pre><code>- vendor/extensions/site_core
+- vendor/extensions/site_core/layouts
+- vendor/extensions/site_core/layouts/article.html
+- vendor/extensions/site_core/layouts/home.html
+- vendor/extensions/site_core/layouts/forums.html
+- vendor/extensions/site_core/layouts/forums/topic.html
+- vendor/extensions/site_core/layouts/forums/topics.html</code></pre>
+
+These layouts get regenerated every time the Rails environment is reloaded. On production systems, this happens when you restart the web server (for example: Mongrel). In development systems, it happens every time you load a page. You should never need to do anything beyond edit the files to see the changes reflected as your developing your intricate CMS.
+
+h2. Who is Responsible?
+
+This extension was written in under an hour by "Pat Allan":http://freelancing-gods - that's not meant as a boast, just an indication of how small it is. If you have questions, comments, suggestions, criticisms and/or patches, you can either email pat at freelancing-gods dot com, hassle him on "Twitter":http://twitter.com/pat, or send a message via "GitHub":http://github.com/freelancing-god.
