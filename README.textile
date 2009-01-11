@@ -1,6 +1,6 @@
 h1. Layout Layer
 
-This plugin only does one job, but it does it well: Automatically creates layouts based on HTML files in other extensions.
+This extension only does one job, but it does it well: Automatically creates layouts based on HTML files in other extensions.
 
 h2. Why?
 

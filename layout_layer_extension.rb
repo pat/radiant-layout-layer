@@ -2,7 +2,7 @@ require 'action_controller/dispatcher'
 require 'layout_layer'
 
 class LayoutLayerExtension < Radiant::Extension
-  version "1.0"
+  version "1.0.1"
   description "Automatically create layouts based on HTML files in other extensions"
   url "http://github.com/freelancing-god/radiant-layout-layer"
   
@@ -10,9 +10,5 @@ class LayoutLayerExtension < Radiant::Extension
     ActionController::Dispatcher.to_prepare :layout_layer do
       LayoutLayer.lay
     end
-  end
-  
-  def deactivate
-    # Do Nothing
   end
 end
