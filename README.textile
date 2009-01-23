@@ -1,6 +1,6 @@
 h1. Layout Layer
 
-This extension only does one job, but it does it well: Automatically creates layouts based on HTML files in other extensions.
+This extension only does one job, but it does it well: Automatically creates layouts and snippets based on HTML files in other extensions.
 
 h2. Why?
 
@@ -20,6 +20,8 @@ So: Any HTML files within an extension's layouts folder (which is not part of th
 - vendor/extensions/site_core/layouts/forums/topics.html</code></pre>
 
 These layouts get regenerated every time the Rails environment is reloaded. On production systems, this happens when you restart the web server (for example: Mongrel). In development systems, it happens every time you load a page. You should never need to do anything beyond edit the files to see the changes reflected as your developing your intricate CMS.
+
+All the above applies to Snippets as well.
 
 h2. Who is Responsible?
 
