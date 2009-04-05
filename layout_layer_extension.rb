@@ -7,6 +7,8 @@ class LayoutLayerExtension < Radiant::Extension
   url "http://github.com/freelancing-god/radiant-layout-layer"
   
   def activate
+    return unless ActiveRecord::Base.connection.tables.include?("layouts")
+    
     ActionController::Dispatcher.to_prepare :layout_layer do
       LayoutLayer.lay
     end
