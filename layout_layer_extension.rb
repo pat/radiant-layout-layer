@@ -11,7 +11,7 @@ class LayoutLayerExtension < Radiant::Extension
     
     ActionController::Dispatcher.to_prepare :layout_layer do
       LayoutLayer.lay
-      ResponseCache.instance.clear
+      Radiant::Cache.clear
     end
   end
 end
